@@ -79,7 +79,9 @@ elif decision == '2':
     L.A     = 037\n \
     RIVERS  = 065\n \
     SANBER  = 071\n \
-    VENTURA = 111\n')
+    VENTURA = 111\n \
+    You can get all county codes here: \n \
+    http://www.epa.gov/enviro/html/codes/state.html \n')
 
     fips = str(fips)
     #Adding zeroes to fips for if people enter it without it
