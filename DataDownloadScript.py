@@ -5,22 +5,24 @@
 from Tkinter import Tk
 from sys import exit
 
-print 'Welcome to the One and Only Veen Census Zipcode Data Finder! \n'
+print '\n Welcome to the One and Only Veen Census Zipcode Data Finder! \n'
 #Get the topic
-topic = raw_input('\n Do you want data about population totals or a breakdown of\
- age and sex? \nType 1 for population totals or 2 for sex & age,\
- and press Enter. \n')
+topic = raw_input('\n What topic do you want data about? \n \
+Type 1 for population totals \n \
+Type 2 for sex & age\n \
+Type 3 for median income \n \
+and press Enter. \n')
 
 #URL-BUILDER PART ONE COMMENCE:
-standardURL = 'http://factfinder2.census.gov/bkmk/table/1.0/en/DEC/10_SF1/'
+standardURL = 'http://factfinder2.census.gov/bkmk/table/1.0/en/'
 
 if topic == '1':
     topic = 'P1'
-    standardURL = standardURL + topic +  '/'
-    
+    standardURL = standardURL + 'DEC/10_SF1/' + topic +  '/'
+
 elif topic == '2':
     topic = 'P12'
-    
+
     #Get race
     race = raw_input('\n Do you want to limit the data to a specific race? \n \
     Press the corresponding letter, or nothing, and then press Enter. \n \
@@ -34,8 +36,11 @@ elif topic == '2':
     H: Hispanic or Latino \n \
     I: White alone, not Hispanic or Latino  \n')
 
-    standardURL = standardURL + topic + race.upper() + '/'
+    standardURL = standardURL + 'DEC/10_SF1/' + topic + race.upper() + '/'
 
+elif topic == '3':
+    standardURL = standardURL + 'ACS/12_5YR/S1903/'
+    # e.g. 'table/1.0/en/ACS/12_5YR/S1903/0400000US06.86000P'
 else:
     exit('Error: invalid input')
 
@@ -66,7 +71,7 @@ if len(statecode) == 1:
 
 if decision =='1':
     standardURL = standardURL + '0400000US' + str(statecode) + '.86000P'
-    
+
 elif decision == '2':
     fips = raw_input('\n Type in the 3-digit county FIPS code. Examples: \n \
     ISLAND  = 029 \n \
@@ -89,7 +94,7 @@ elif decision == '2':
         fips = '00' + str(fips)
     elif len(fips) == 2:
         fips = '0' + str(fips)
-    
+
     standardURL = standardURL + '0400000US06.86000P|0500000US' \
                   + statecode + fips
 
