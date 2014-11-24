@@ -95,8 +95,8 @@ elif decision == '2':
     elif len(fips) == 2:
         fips = '0' + str(fips)
 
-    standardURL = standardURL + '0400000US06.86000P|0500000US' \
-                  + statecode + fips
+    standardURL = standardURL + '0500000US06' + fips +'.86000P'
+
 
 print '\n The URL \n', standardURL, '\n has been pasted to your clipboard.'
 print '\n PLEASE NOTE: If you want to join this data with something like ArcGIS,'
@@ -111,7 +111,7 @@ print '\n veen out'
 'http://factfinder2.census.gov/bkmk/table/1.0/en/DEC/10_SF1/P12A/0400000US06.86000P'
 
 #Example of the same, clipped to LA:
-'http://factfinder2.census.gov/bkmk/table/1.0/en/DEC/10_SF1/P12A/0400000US06.86000P|0500000US06037'
+'http://factfinder2.census.gov/bkmk/table/1.0/en/DEC/10_SF1/P12A/0500000US06037.86000P'
 
 #Windows way:
 output = standardURL
