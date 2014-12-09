@@ -1,0 +1,48 @@
+<query schema-version="1.0" lang="en" type="table" sig="lDdj0_Pz-7L47pOzj8tuuzLtpEM">
+  <product program-id="ACS" dataset-id="11_5YR" table-id="B20004"/>
+  <selection>
+    <dimension type="geo" vintage="2011">
+      <cat-id>0400000US06.86000P</cat-id>
+      <cat-id>0400000US53.86000P</cat-id>
+    </dimension>
+  </selection>
+  <data-config>
+    <axis name="V">
+      <dim-id>VDIM</dim-id>
+      <hide>
+        <cat-id>VD03</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD04</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD05</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD06</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD07</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD08</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD15</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD16</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD17</cat-id>
+      </hide>
+      <hide>
+        <cat-id>VD19</cat-id>
+      </hide>
+      <collapse>
+        <cat-id>VD08</cat-id>
+      </collapse>
+    </axis>
+  </data-config>
+  <table is-transposed="true"/>
+</query>
